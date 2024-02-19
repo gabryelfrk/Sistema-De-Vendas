@@ -58,6 +58,8 @@ end;
 
 procedure TViewCidadesCadastrar.btnGravarClick(Sender: TObject);
 begin
+  ModelCidadeDM.ValidarDadosQueryCadastro;
+
   DataSource1.DataSet.Post;
 
   // Herda lógica padrão

@@ -71,7 +71,7 @@ end;
 
 procedure TModelCidadesDM.QCidadesCadastroBeforePost(DataSet: TDataSet);
 begin
-  Self.ValidarDadosQueryCadastro;
+  Self.ModelCidadesDM.ValidarDadosQueryCadastro;
 end;
 
 procedure TModelCidadesDM.ValidarDadosQueryCadastro;

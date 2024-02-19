@@ -94,7 +94,6 @@ inherited ViewCidadesCadastrar: TViewCidadesCadastrar
       Style = csDropDownList
       DataField = 'UF'
       DataSource = DataSource1
-      DropDownCount = 28
       Items.Strings = (
         'AC'
         'AL'

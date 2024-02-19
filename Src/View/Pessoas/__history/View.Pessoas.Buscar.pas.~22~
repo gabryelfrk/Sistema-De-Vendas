@@ -27,9 +27,9 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
-  public
+  protected
     procedure BuscarDados; override;
-    procedure ChamarTelaCadastrar(id: integer = 0); override;
+  public
   end;
 
 var
@@ -57,11 +57,6 @@ begin
   ModelPessoasDM.pessoasBuscar(condicao);
 
   // Herda lógica padrão
-  inherited;
-end;
-
-procedure TViewPessoasBuscar.ChamarTelaCadastrar(id: integer = 0);
-begin
   inherited;
 end;
 

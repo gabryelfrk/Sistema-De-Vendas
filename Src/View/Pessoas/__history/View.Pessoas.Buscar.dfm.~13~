@@ -1,15 +1,27 @@
 inherited ViewPessoasBuscar: TViewPessoasBuscar
   Caption = 'Pessoas Buscar'
+  ClientWidth = 1003
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   TextHeight = 15
   inherited pnTopo: TPanel
+    Width = 1003
+    ExplicitWidth = 1003
+    DesignSize = (
+      999
+      55)
     inherited edtBuscar: TEdit
+      Width = 940
       ExplicitWidth = 940
     end
   end
   inherited pnGrid: TPanel
+    Width = 1003
+    ExplicitWidth = 999
+    ExplicitHeight = 458
     inherited DBGrid1: TDBGrid
+      Width = 1003
+      Height = 437
       Columns = <
         item
           Expanded = False
@@ -76,19 +88,46 @@ inherited ViewPessoasBuscar: TViewPessoasBuscar
         end>
     end
     inherited pnTotal: TPanel
+      Top = 437
+      Width = 1003
+      ExplicitTop = 437
+      ExplicitWidth = 999
       inherited lbTotal: TLabel
+        Left = 838
+        Height = 19
         ExplicitLeft = 838
       end
     end
   end
   inherited pnRodape: TPanel
+    Width = 1003
+    ExplicitTop = 515
+    ExplicitWidth = 999
     inherited rdGroupFiltros: TRadioGroup
+      Width = 597
       Columns = 3
       ItemIndex = 1
       Items.Strings = (
         'C'#243'digo (F1)'
         'Nome / Fantasia (F2)'
         'Cidade (F3)')
+      ExplicitWidth = 593
+    end
+    inherited btnCadastrar: TBitBtn
+      Left = 598
+      ExplicitLeft = 594
+    end
+    inherited btnUtilizar: TBitBtn
+      Left = 800
+      ExplicitLeft = 796
+    end
+    inherited btnFechar: TBitBtn
+      Left = 901
+      ExplicitLeft = 897
+    end
+    inherited btnAlterar: TBitBtn
+      Left = 699
+      ExplicitLeft = 695
     end
   end
   inherited DataSource1: TDataSource

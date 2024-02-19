@@ -12,7 +12,6 @@ object ViewHerancasCadastrar: TViewHerancasCadastrar
   Font.Style = []
   KeyPreview = True
   Position = poScreenCenter
-  OnCreate = FormCreate
   OnKeyDown = FormKeyDown
   OnKeyPress = FormKeyPress
   TextHeight = 15

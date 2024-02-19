@@ -60,9 +60,10 @@ begin
   inherited;
 end;
 
-procedure TViewPessoasBuscar.ChamarTelaCadastrar(id: integer = 0);
+procedure TViewPessoasBuscar.ChamarTelaCadastrar(id: integer);
 begin
   inherited;
+
 end;
 
 procedure TViewPessoasBuscar.FormCreate(Sender: TObject);

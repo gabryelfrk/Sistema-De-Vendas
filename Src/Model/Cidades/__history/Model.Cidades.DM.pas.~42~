@@ -31,7 +31,6 @@ type
     QCidadesBuscaUF: TStringField;
     QCidadesBuscaCODIGO_IBGE: TIntegerField;
     QCidadesCadastroID: TFDAutoIncField;
-    procedure QCidadesCadastroBeforePost(DataSet: TDataSet);
   private
   public
     procedure CidadesBuscar(const condicao : string);
@@ -67,11 +66,6 @@ begin
   QCidadesBusca.SQL.Add('SELECT * FROM CIDADES');
   QCidadesBusca.SQL.Add(condicao);
   QCidadesBusca.Open;
-end;
-
-procedure TModelCidadesDM.QCidadesCadastroBeforePost(DataSet: TDataSet);
-begin
-  Self.ValidarDadosQueryCadastro;
 end;
 
 procedure TModelCidadesDM.ValidarDadosQueryCadastro;

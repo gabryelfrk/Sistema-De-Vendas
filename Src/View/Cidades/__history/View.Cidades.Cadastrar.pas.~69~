@@ -45,7 +45,7 @@ procedure TViewCidadesCadastrar.FormShow(Sender: TObject);
 begin
   inherited;
 
-  ModelCidadesDM.CadastrarGet(idRegistroAlterar);
+  ModelCidadesDM.CadastrarGet(FIdRegistroAlterar);
 
   if (DataSource1.DataSet.IsEmpty) then begin
     DataSource1.DataSet.Append;
@@ -58,6 +58,23 @@ end;
 
 procedure TViewCidadesCadastrar.btnGravarClick(Sender: TObject);
 begin
+  if (Trim(edtNome.Text).IsEmpty) then begin
+    edtNome.SetFocus;
+    raise Exception.Create('Preencha o campo nome!');
+  end;
+
+  if (Trim(cBoxUF.Text).IsEmpty) then begin
+    cBoxUF.SetFocus;
+    raise Exception.Create('Preencha o campo UF!');
+  end;
+
+  if (not Trim(edtCodigoIBGE.Text).IsEmpty) then begin
+    if (Length(edtCodigoIBGE.Text) <> 7) then begin
+      edtCodigoIBGE.SetFocus;
+      raise Exception.Create('Código IBGE deve conter 7 carácteres!');
+    end;
+  end;
+
   DataSource1.DataSet.Post;
 
   // Herda lógica padrão

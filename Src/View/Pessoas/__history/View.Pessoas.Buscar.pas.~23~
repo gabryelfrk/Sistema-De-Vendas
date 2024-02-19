@@ -29,7 +29,6 @@ type
   private
   public
     procedure BuscarDados; override;
-    procedure ChamarTelaCadastrar(id: integer = 0); override;
   end;
 
 var
@@ -57,11 +56,6 @@ begin
   ModelPessoasDM.pessoasBuscar(condicao);
 
   // Herda lógica padrão
-  inherited;
-end;
-
-procedure TViewPessoasBuscar.ChamarTelaCadastrar(id: integer = 0);
-begin
   inherited;
 end;
 

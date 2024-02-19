@@ -2,7 +2,6 @@ object ModelCidadesDM: TModelCidadesDM
   Height = 201
   Width = 301
   object QCidadesCadastro: TFDQuery
-    BeforePost = QCidadesCadastroBeforePost
     Connection = ModelConexaoDM.FDConnection1
     SQL.Strings = (
       'SELECT * FROM CIDADES')
