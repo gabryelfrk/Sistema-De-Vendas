@@ -1,0 +1,99 @@
+unit View.Herancas.Cadastrar;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.ExtCtrls,
+  Vcl.StdCtrls,
+  Vcl.Buttons,
+  Data.DB;
+
+type
+  TViewHerancasCadastrar = class(TForm)
+    pnDados: TPanel;
+    pnRodape: TPanel;
+    btnGravar: TBitBtn;
+    btnCancelar: TBitBtn;
+    DataSource1: TDataSource;
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnGravarClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewHerancasCadastrar: TViewHerancasCadastrar;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewHerancasCadastrar.btnCancelarClick(Sender: TObject);
+begin
+  if (DataSource1.DataSet.State in [dsInsert, dsEdit]) then begin
+    DataSource1.DataSet.Cancel;
+  end;
+
+  Self.Close;
+  Self.ModalResult := mrCancel;
+end;
+
+procedure TViewHerancasCadastrar.btnGravarClick(Sender: TObject);
+begin
+  Self.Close;
+  Self.ModalResult := mrOk;     
+end;
+
+procedure TViewHerancasCadastrar.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  case (Key) of
+    VK_F3:
+    begin
+      btnGravar.Click;
+    end;
+
+    VK_F4:
+    begin
+
+      // Se F4, e Alt estiver pressionado
+      if (ssAlt in Shift) then begin
+
+        // Recebe 0 pro usuário não fechar com ALT + F4
+        Key := 0;
+      end;
+    end;
+
+    VK_ESCAPE:
+    begin
+      btnCancelar.Click;
+    end;
+  end;
+end;
+
+procedure TViewHerancasCadastrar.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+
+  // Se pressionar ENTER
+  if (Key = #13) then begin
+
+    // Emula o TAB para pular os campos
+    Perform(CM_DIALOGKEY, VK_TAB, 0);
+    Key := #0;
+  end;
+end;
+
+end.

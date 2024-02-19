@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/07/07 14:48:20.000.314,=C:\Users\gabry\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/01 18:30:15.000.742,=C:\Users\gabry\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/01 18:32:55.000.571,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\View.Principal.dfm=C:\Users\gabry\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/09/01 18:32:55.000.571,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\View.Principal.pas=C:\Users\gabry\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/01 18:33:15.000.851,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\Vendas.dproj=C:\Users\gabry\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/11/01 19:12:18.000.119,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Vendas.dproj=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\Vendas.dproj</Transaction>
+    <Transaction>2023/11/07 18:19:41.000.282,=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+    <Transaction>2023/11/07 18:20:40.000.053,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\Model\Conexão\Model.Conexao.DM.dfm=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.dfm</Transaction>
+    <Transaction>2023/11/07 18:20:40.000.053,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\Model\Conexão\Model.Conexao.DM.pas=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+    <Transaction>2023/11/14 18:44:22.000.766,=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+    <Transaction>2023/11/14 18:44:50.000.431,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\Model\Cidades\Model.Cidades.DM.pas=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+    <Transaction>2023/11/14 18:44:50.000.431,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\Model\Cidades\Model.Cidades.DM.dfm=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.dfm</Transaction>
+    <Transaction>2023/11/17 18:04:48.000.219,=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit2.pas</Transaction>
+    <Transaction>2023/11/17 18:11:48.000.588,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit2.dfm=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Heranças\View.Herancas.Buscar.dfm</Transaction>
+    <Transaction>2023/11/17 18:11:48.000.588,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit2.pas=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Heranças\View.Herancas.Buscar.pas</Transaction>
+    <Transaction>2023/11/23 19:37:04.000.473,=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+    <Transaction>2023/11/23 19:41:33.000.112,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Cidades\View.Cidades.pas</Transaction>
+    <Transaction>2023/11/23 19:41:33.000.112,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.dfm=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Cidades\View.Cidades.dfm</Transaction>
+    <Transaction>2023/11/23 19:41:48.000.099,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Cidades\View.Cidades.dfm=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Cidades\View.Cidades.Buscar.dfm</Transaction>
+    <Transaction>2023/11/23 19:41:48.000.099,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Cidades\View.Cidades.pas=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Cidades\View.Cidades.Buscar.pas</Transaction>
+    <Transaction>2023/11/30 18:10:05.000.861,=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+    <Transaction>2023/11/30 18:11:59.000.166,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Herancas\View.Herancas.Cadastrar.pas</Transaction>
+    <Transaction>2023/11/30 18:11:59.000.166,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.dfm=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Herancas\View.Herancas.Cadastrar.dfm</Transaction>
+    <Transaction>2023/12/09 10:48:32.000.593,=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+    <Transaction>2023/12/09 10:49:39.000.502,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.dfm=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Cidades\View.Cidades.Cadastrar.dfm</Transaction>
+    <Transaction>2023/12/09 10:49:39.000.502,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Cidades\View.Cidades.Cadastrar.pas</Transaction>
+    <Transaction>2024/01/04 19:49:57.000.335,=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+    <Transaction>2024/01/04 19:50:25.000.387,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\Model\Pessoas\Model.Pessoas.DM.pas</Transaction>
+    <Transaction>2024/01/04 19:50:25.000.387,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.dfm=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\Model\Pessoas\Model.Pessoas.DM.dfm</Transaction>
+    <Transaction>2024/01/04 19:52:38.000.774,=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+    <Transaction>2024/01/04 19:52:58.000.058,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\Model\Pessoas\Model.Pessoas.DM.pas=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+    <Transaction>2024/01/04 19:52:58.000.058,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\Model\Pessoas\Model.Pessoas.DM.dfm=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.dfm</Transaction>
+    <Transaction>2024/01/05 19:02:08.000.275,=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+    <Transaction>2024/01/05 19:02:36.000.149,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Pessoas\View.Pessoas.Buscar.dfm=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.dfm</Transaction>
+    <Transaction>2024/01/05 19:02:36.000.149,C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Src\View\Pessoas\View.Pessoas.Buscar.pas=C:\Users\gabry\OneDrive\Área de Trabalho\Vendas\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

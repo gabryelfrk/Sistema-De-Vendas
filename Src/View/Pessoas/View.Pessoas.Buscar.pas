@@ -1,0 +1,83 @@
+unit View.Pessoas.Buscar;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  View.Herancas.Buscar,
+  Data.DB,
+  Vcl.Menus,
+  Vcl.StdCtrls,
+  Vcl.Buttons,
+  Vcl.ExtCtrls,
+  Vcl.Grids,
+  Vcl.DBGrids,
+  Model.Pessoas.DM;
+
+type
+  TViewPessoasBuscar = class(TViewHerancasBuscar)
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+  private
+  protected
+    procedure BuscarDados; override;
+  public
+  end;
+
+var
+  ViewPessoasBuscar: TViewPessoasBuscar;
+
+implementation
+
+{$R *.dfm}
+
+{ TViewPessoasBuscar }
+
+procedure TViewPessoasBuscar.BuscarDados;
+var
+  buscar, condicao: string;
+begin
+  buscar   := QuotedStr('%'+edtBuscar.Text+'%').ToUpper;
+  condicao := '';
+
+  case (rdGroupFiltros.ItemIndex) of
+    0: condicao := 'WHERE (UPPER(P.ID) LIKE '   + buscar +')';
+    1: condicao := 'WHERE (UPPER(P.NOME) LIKE ' + buscar +') OR (UPPER(P.FANTASIA) LIKE ' + buscar +')';
+    2: condicao := 'WHERE (UPPER(C.NOME) LIKE ' + buscar +')';
+  end;
+
+  ModelPessoasDM.pessoasBuscar(condicao);
+
+  // Herda lógica padrão
+  inherited;
+end;
+
+procedure TViewPessoasBuscar.FormCreate(Sender: TObject);
+begin
+
+  // Herda lógica padrão
+  inherited;
+
+  if (ModelPessoasDM = nil) then begin
+    ModelPessoasDM := TModelPessoasDM.Create(nil);
+  end;
+end;
+
+procedure TViewPessoasBuscar.FormDestroy(Sender: TObject);
+begin
+
+  // Herda lógica padrão
+  inherited;
+
+  FreeAndNil(ModelPessoasDM);
+end;
+
+end.
