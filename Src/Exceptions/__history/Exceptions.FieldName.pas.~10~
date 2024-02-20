@@ -1,0 +1,26 @@
+unit Exceptions.FieldName;
+
+interface
+
+uses
+  System.SysUtils;
+
+type
+  ExceptionsFieldName = class(Exception)
+  private
+    fFieldName: string;
+  public
+    constructor Create(const message, fieldName: string); reintroduce;
+    property fieldName: string read fFieldName write fFieldName;
+  end;
+
+implementation
+
+{ ExceptionsFieldName }
+
+constructor ExceptionsFieldName.Create(const message, fieldName: string);
+begin
+
+end;
+
+end.

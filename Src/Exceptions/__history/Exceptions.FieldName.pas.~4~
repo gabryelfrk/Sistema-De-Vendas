@@ -1,0 +1,15 @@
+unit Exceptions.FieldName;
+
+interface
+
+uses
+  System.SysUtils;
+
+type
+  ExceptionsFieldName = class(Exception)
+
+  end;
+
+implementation
+
+end.

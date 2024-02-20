@@ -41,6 +41,9 @@ implementation
 
 {$R *.dfm}
 
+uses
+  Exceptions.FieldName;
+
 procedure TViewCidadesCadastrar.FormShow(Sender: TObject);
 begin
   inherited;
@@ -58,7 +61,14 @@ end;
 
 procedure TViewCidadesCadastrar.btnGravarClick(Sender: TObject);
 begin
-  DataSource1.DataSet.Post;
+  try
+    DataSource1.DataSet.Post;
+  except
+    on E: ExceptionsFieldName do begin
+      ShowMessage('Erro: ' + E.Message + sLineBreak + 'FieldName: ' + E.fieldName);
+      Exit;
+    end;
+  end;
 
   // Herda lógica padrão
   inherited;

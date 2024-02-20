@@ -1,0 +1,18 @@
+unit Exceptions.FieldName;
+
+interface
+
+uses
+  System.SysUtils;
+
+type
+  ExceptionsFieldName = class(Exception)
+  private
+    FFieldName: string;
+  public
+    property FieldName: string read FieldName write FieldName;
+  end;
+
+implementation
+
+end.
