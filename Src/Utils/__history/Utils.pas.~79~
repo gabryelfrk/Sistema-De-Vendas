@@ -1,0 +1,68 @@
+unit Utils;
+
+interface
+
+uses
+  System.SysUtils,
+  System.Classes,
+  System.RTTI,
+  Vcl.Forms,
+  Vcl.Controls,
+  Exceptions.FieldName,
+  RTTI.FieldName;
+
+type TUtils = class
+  private
+  public
+    class procedure tratarExceptionFieldName(const form: TForm; const E: ExceptionsFieldName);
+end;
+
+implementation
+
+{ TUtils }
+
+class procedure TUtils.tratarExceptionFieldName(const form: TForm; const E: ExceptionsFieldName);
+var
+  RttiContext     : TRttiContext;
+  RttiType        : TRttiType;
+  RttiField       : TRttiField;
+  CustomAttribute : TCustomAttribute;
+  vFieldName      : FieldName;
+  Component       : TComponent;
+begin
+  RttiContext := TRttiContext.Create;
+  RttiType    :=  RttiContext.GetType(form.ClassInfo); // Tenho acesso as inf. do formulário
+
+  for RttiField in RttiType.GetFields do begin
+
+    // Se for diferente desse tipo, são os fields das heranças do formulário
+    if (RttiField.Parent <> RttiType) then begin
+      Continue;
+    end;
+
+    for CustomAttribute in RttiField.GetAttributes do begin
+
+      // Se não for o FieldName que procura..
+      if (not (CustomAttribute is FieldName)) then begin
+        Continue;
+      end;
+
+      vFieldName := FieldName(CustomAttribute);
+      if (vFieldName.nome.ToUpper <> E.fieldName) then begin
+        Continue;
+      end;
+
+      Component := form.FindComponent(RttiField.Name);
+      if (Component = nil) then begin
+        Continue;
+      end;
+
+      // Se o componente encontrado não herda de TWinControl
+      if not (Component is TWinControl) then begin
+
+      end;
+    end;
+  end;
+end;
+
+end.

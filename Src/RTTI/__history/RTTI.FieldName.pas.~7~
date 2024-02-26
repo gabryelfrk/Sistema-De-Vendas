@@ -1,0 +1,18 @@
+unit RTTI.FieldName;
+
+interface
+
+uses
+  System.SysUtils;
+
+implementation
+
+type
+  FieldName = class(TCustomAttribute)
+  private
+    fNome: string;
+  public
+    property nome: string read fNome write fNome;
+  end;
+
+end.

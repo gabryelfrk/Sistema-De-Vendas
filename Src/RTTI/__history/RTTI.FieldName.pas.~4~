@@ -1,0 +1,16 @@
+unit RTTI.FieldName;
+
+interface
+
+uses
+  System.SysUtils;
+
+implementation
+
+type
+  FieldName = class(TCustomAttributes)
+  private
+  public
+  end;
+
+end.

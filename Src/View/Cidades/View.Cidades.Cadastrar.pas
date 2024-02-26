@@ -19,7 +19,8 @@ uses
   Vcl.ExtCtrls,
   Model.Cidades.DM,
   Vcl.Mask,
-  Vcl.DBCtrls;
+  Vcl.DBCtrls,
+  RTTI.FieldName;
 
 type
   TViewCidadesCadastrar = class(TViewHerancasCadastrar)
@@ -28,8 +29,14 @@ type
     Label3: TLabel;
     Label4: TLabel;
     edtCodigo: TDBEdit;
+
+    [FieldName('CODIGO_IBGE')]
     edtCodigoIBGE: TDBEdit;
+
+    [FieldName('NOME')]
     edtNome: TDBEdit;
+
+    [FieldName('UF')]
     cBoxUF: TDBComboBox;
     procedure btnGravarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -42,7 +49,8 @@ implementation
 {$R *.dfm}
 
 uses
-  Exceptions.FieldName;
+  Exceptions.FieldName,
+  Utils;
 
 procedure TViewCidadesCadastrar.FormShow(Sender: TObject);
 begin
@@ -65,8 +73,7 @@ begin
     DataSource1.DataSet.Post;
   except
     on E: ExceptionsFieldName do begin
-      ShowMessage('Erro: ' + E.Message + sLineBreak + 'FieldName: ' + E.fieldName);
-      Exit;
+      TUtils.tratarExceptionFieldName(Self, E);
     end;
   end;
 
