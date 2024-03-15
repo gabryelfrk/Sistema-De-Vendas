@@ -8,11 +8,13 @@ uses
   System.RTTI,
   Vcl.Forms,
   Vcl.Controls,
+  Vcl.ComCtrls,
   Exceptions.FieldName,
   RTTI.FieldName;
 
 type TUtils = class
   private
+    class procedure setFocusComponente(const winControl: TWinControl);
   public
     class procedure tratarExceptionFieldName(const form: TForm; const E: ExceptionsFieldName);
 end;
@@ -28,7 +30,7 @@ var
   RttiField       : TRttiField;
   CustomAttribute : TCustomAttribute;
   vFieldName      : FieldName;
-  Component       : TComponent;
+  Componente      : TComponent;
 begin
   RttiContext := TRttiContext.Create;
   RttiType    :=  RttiContext.GetType(form.ClassInfo); // Tenho acesso as inf. do formulário
@@ -52,15 +54,42 @@ begin
         Continue;
       end;
 
-      Component := form.FindComponent(RttiField.Name);
-      if (Component = nil) then begin
+      Componente := form.FindComponent(RttiField.Name);
+      if (Componente = nil) then begin
         Continue;
       end;
 
-      if (Component is TWinControl) then begin
+      // Se o componente encontrado não herda de TWinControl
+      if not (Componente is TWinControl) then begin
+        Continue;
       end;
 
+      Self.setFocusComponente(TWinControl(Componente));
     end;
+  end;
+
+  raise Exception.Create(E.Message);
+end;
+
+class procedure TUtils.setFocusComponente(const winControl: TWinControl);
+var
+  parent: TComponent;
+begin
+  parent := winControl.Parent;
+  while (parent <> nil) and (parent.ClassParent <> TForm) do begin
+    if (parent is TTabSheet) then begin
+
+      // Se a aba não estiver selecionada
+      if (not TTabSheet(parent).Showing) then begin
+        TTabSheet(parent).Show;
+      end;
+
+      parent := TWinControl(parent).Parent;
+    end;
+  end;
+
+  if (winControl.CanFocus) then begin
+    winControl.SetFocus;
   end;
 end;
 

@@ -1,16 +1,16 @@
 inherited ViewCidadesCadastrar: TViewCidadesCadastrar
   Caption = 'Cidades Cadastrar/Alterar'
-  ClientHeight = 342
-  ClientWidth = 659
+  ClientHeight = 483
+  ClientWidth = 951
   OnShow = FormShow
-  ExplicitWidth = 671
-  ExplicitHeight = 380
+  ExplicitWidth = 963
+  ExplicitHeight = 521
   TextHeight = 15
   inherited pnDados: TPanel
-    Width = 659
-    Height = 301
-    ExplicitWidth = 655
-    ExplicitHeight = 300
+    Width = 951
+    Height = 442
+    ExplicitWidth = 651
+    ExplicitHeight = 299
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -75,16 +75,7 @@ inherited ViewCidadesCadastrar: TViewCidadesCadastrar
       Height = 23
       DataField = 'CODIGO_IBGE'
       DataSource = DataSource1
-      TabOrder = 3
-    end
-    object edtNome: TDBEdit
-      Left = 8
-      Top = 80
-      Width = 650
-      Height = 23
-      DataField = 'NOME'
-      DataSource = DataSource1
-      TabOrder = 1
+      TabOrder = 2
     end
     object cBoxUF: TDBComboBox
       Left = 8
@@ -124,21 +115,60 @@ inherited ViewCidadesCadastrar: TViewCidadesCadastrar
         'SP'
         'TO'
         'EX')
-      TabOrder = 2
+      TabOrder = 1
+    end
+    object PageControl1: TPageControl
+      Left = 224
+      Top = 112
+      Width = 713
+      Height = 305
+      ActivePage = TabSheet2
+      TabOrder = 3
+      object TabSheet1: TTabSheet
+        Caption = 'TabSheet1'
+      end
+      object TabSheet2: TTabSheet
+        Caption = 'TabSheet2'
+        ImageIndex = 1
+        object PageControl2: TPageControl
+          Left = 7
+          Top = 14
+          Width = 692
+          Height = 253
+          ActivePage = TabSheet4
+          TabOrder = 0
+          object TabSheet3: TTabSheet
+            Caption = 'TabSheet3'
+          end
+          object TabSheet4: TTabSheet
+            Caption = 'TabSheet4'
+            ImageIndex = 1
+            object edtNome: TDBEdit
+              Left = 8
+              Top = 80
+              Width = 650
+              Height = 23
+              DataField = 'NOME'
+              DataSource = DataSource1
+              TabOrder = 0
+            end
+          end
+        end
+      end
     end
   end
   inherited pnRodape: TPanel
-    Top = 301
-    Width = 659
-    ExplicitTop = 300
-    ExplicitWidth = 655
+    Top = 442
+    Width = 951
+    ExplicitTop = 299
+    ExplicitWidth = 651
     inherited btnGravar: TBitBtn
-      Left = 398
-      ExplicitLeft = 394
+      Left = 690
+      ExplicitLeft = 390
     end
     inherited btnCancelar: TBitBtn
-      Left = 528
-      ExplicitLeft = 524
+      Left = 820
+      ExplicitLeft = 520
     end
   end
   inherited DataSource1: TDataSource

@@ -20,7 +20,7 @@ uses
   Model.Cidades.DM,
   Vcl.Mask,
   Vcl.DBCtrls,
-  RTTI.FieldName;
+  RTTI.FieldName, Vcl.ComCtrls;
 
 type
   TViewCidadesCadastrar = class(TViewHerancasCadastrar)
@@ -38,6 +38,12 @@ type
 
     [FieldName('UF')]
     cBoxUF: TDBComboBox;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    PageControl2: TPageControl;
+    TabSheet3: TTabSheet;
+    TabSheet4: TTabSheet;
     procedure btnGravarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private

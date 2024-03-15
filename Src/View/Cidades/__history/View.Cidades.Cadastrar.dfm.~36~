@@ -1,16 +1,16 @@
 inherited ViewCidadesCadastrar: TViewCidadesCadastrar
   Caption = 'Cidades Cadastrar/Alterar'
-  ClientHeight = 345
-  ClientWidth = 671
-  OnCreate = FormCreate
-  ExplicitWidth = 683
-  ExplicitHeight = 383
+  ClientHeight = 341
+  ClientWidth = 655
+  OnShow = FormShow
+  ExplicitWidth = 667
+  ExplicitHeight = 379
   TextHeight = 15
   inherited pnDados: TPanel
-    Width = 671
-    Height = 304
-    ExplicitWidth = 667
-    ExplicitHeight = 303
+    Width = 655
+    Height = 300
+    ExplicitWidth = 651
+    ExplicitHeight = 299
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -94,6 +94,7 @@ inherited ViewCidadesCadastrar: TViewCidadesCadastrar
       Style = csDropDownList
       DataField = 'UF'
       DataSource = DataSource1
+      DropDownCount = 28
       Items.Strings = (
         'AC'
         'AL'
@@ -127,17 +128,17 @@ inherited ViewCidadesCadastrar: TViewCidadesCadastrar
     end
   end
   inherited pnRodape: TPanel
-    Top = 304
-    Width = 671
-    ExplicitTop = 303
-    ExplicitWidth = 667
+    Top = 300
+    Width = 655
+    ExplicitTop = 299
+    ExplicitWidth = 651
     inherited btnGravar: TBitBtn
-      Left = 410
-      ExplicitLeft = 406
+      Left = 394
+      ExplicitLeft = 390
     end
     inherited btnCancelar: TBitBtn
-      Left = 540
-      ExplicitLeft = 536
+      Left = 524
+      ExplicitLeft = 520
     end
   end
   inherited DataSource1: TDataSource
