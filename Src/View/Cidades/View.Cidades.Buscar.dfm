@@ -1,26 +1,21 @@
 inherited ViewCidadesBuscar: TViewCidadesBuscar
   Caption = 'Cidades Buscar'
-  ClientHeight = 568
-  ClientWidth = 1007
+  ClientHeight = 566
   OnCreate = FormCreate
   OnDestroy = FormDestroy
-  ExplicitWidth = 1019
-  ExplicitHeight = 606
+  ExplicitHeight = 605
   TextHeight = 15
   inherited pnTopo: TPanel
-    Width = 1007
-    ExplicitWidth = 1003
     inherited edtBuscar: TEdit
-      Width = 944
-      ExplicitWidth = 940
+      Width = 936
+      ExplicitWidth = 932
     end
   end
   inherited pnGrid: TPanel
-    Width = 1007
-    Height = 461
-    ExplicitHeight = 460
+    Height = 459
+    ExplicitHeight = 459
     inherited DBGrid1: TDBGrid
-      Height = 440
+      Height = 439
       Columns = <
         item
           Expanded = False
@@ -35,28 +30,22 @@ inherited ViewCidadesBuscar: TViewCidadesBuscar
         item
           Expanded = False
           FieldName = 'UF'
-          Width = 64
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'CODIGO_IBGE'
-          Width = 64
           Visible = True
         end>
     end
     inherited pnTotal: TPanel
-      Top = 440
-      ExplicitTop = 439
-      inherited lbTotal: TLabel
-        Height = 19
-      end
+      Top = 439
+      ExplicitTop = 438
     end
   end
   inherited pnRodape: TPanel
-    Top = 518
-    Width = 1007
-    ExplicitTop = 517
+    Top = 516
+    ExplicitTop = 516
     inherited rdGroupFiltros: TRadioGroup
       Columns = 3
       ItemIndex = 1

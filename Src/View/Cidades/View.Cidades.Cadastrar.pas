@@ -34,16 +34,10 @@ type
     edtCodigoIBGE: TDBEdit;
 
     [FieldName('NOME')]
-    edtNome: TDBEdit;
 
     [FieldName('UF')]
     cBoxUF: TDBComboBox;
-    PageControl1: TPageControl;
-    TabSheet1: TTabSheet;
-    TabSheet2: TTabSheet;
-    PageControl2: TPageControl;
-    TabSheet3: TTabSheet;
-    TabSheet4: TTabSheet;
+    edtNome: TDBEdit;
     procedure btnGravarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private

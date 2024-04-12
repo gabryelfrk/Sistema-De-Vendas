@@ -76,6 +76,7 @@ begin
   try
     ViewCidadesCadastrar.idRegistroAlterar := id;
     if (ViewCidadesCadastrar.ShowModal = mrOk) then begin
+      inherited ultID := ViewCidadesCadastrar.ultID;
       Self.BuscarDados;
     end;
   finally

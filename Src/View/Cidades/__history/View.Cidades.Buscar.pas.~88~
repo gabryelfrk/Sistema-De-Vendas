@@ -1,0 +1,108 @@
+unit View.Cidades.Buscar;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  View.Herancas.Buscar,
+  Data.DB,
+  Vcl.StdCtrls,
+  Vcl.Buttons,
+  Vcl.ExtCtrls,
+  Vcl.Grids,
+  Vcl.DBGrids,
+  Model.Cidades.DM,
+  Vcl.Menus;
+
+type
+  TViewCidadesBuscar = class(TViewHerancasBuscar)
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+  private
+    FultID: integer;
+  protected
+    procedure BuscarDados; override;
+    procedure ChamarTelaCadastrar(id: integer = 0); override;
+  public
+    property ultID: integer read FultID;
+  end;
+
+var
+  ViewCidadesBuscar: TViewCidadesBuscar;
+
+implementation
+
+{$R *.dfm}
+
+uses
+  View.Cidades.Cadastrar;
+
+{ TViewCidadesBuscar }
+
+procedure TViewCidadesBuscar.BuscarDados;
+var
+  buscar, condicao: string;
+begin
+  buscar   := QuotedStr('%'+edtBuscar.Text+'%').ToUpper;
+  condicao := '';
+
+  case (rdGroupFiltros.ItemIndex) of
+    0: condicao := 'WHERE (UPPER(ID) LIKE '   + buscar +')';
+    1: condicao := 'WHERE (UPPER(NOME) LIKE ' + buscar +')';
+    2: condicao := 'WHERE (UPPER(UF) LIKE '   + buscar +')';
+  end;
+
+  ModelCidadesDM.CidadesBuscar(condicao);
+
+  // Herda lógica padrão
+  inherited;
+end;
+
+procedure TViewCidadesBuscar.ChamarTelaCadastrar(id: integer = 0);
+var
+  ViewCidadesCadastrar: TViewCidadesCadastrar;
+begin
+
+  // Herda lógica padrão
+  inherited;
+
+  ViewCidadesCadastrar := TViewCidadesCadastrar.Create(nil);
+  try
+    ViewCidadesCadastrar.idRegistroAlterar := id;
+    if (ViewCidadesCadastrar.ShowModal = mrOk) then begin
+      Self.BuscarDados;
+    end;
+  finally
+   ViewCidadesCadastrar.Free;
+  end;
+end;
+
+procedure TViewCidadesBuscar.FormCreate(Sender: TObject);
+begin
+
+  // Herda lógica padrão
+  inherited;
+
+  if (ModelCidadesDM = nil) then begin
+    ModelCidadesDM := TModelCidadesDM.Create(nil);
+  end;
+end;
+
+procedure TViewCidadesBuscar.FormDestroy(Sender: TObject);
+begin
+
+  // Herda lógica padrão
+  inherited;
+
+  FreeAndNil(ModelCidadesDM);
+end;
+
+end.

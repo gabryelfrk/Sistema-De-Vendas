@@ -1,16 +1,16 @@
 inherited ViewCidadesCadastrar: TViewCidadesCadastrar
   Caption = 'Cidades Cadastrar/Alterar'
-  ClientHeight = 483
-  ClientWidth = 951
+  ClientHeight = 276
+  ClientWidth = 636
   OnShow = FormShow
-  ExplicitWidth = 963
-  ExplicitHeight = 521
+  ExplicitWidth = 648
+  ExplicitHeight = 314
   TextHeight = 15
   inherited pnDados: TPanel
-    Width = 951
-    Height = 442
-    ExplicitWidth = 651
-    ExplicitHeight = 299
+    Width = 636
+    Height = 235
+    ExplicitWidth = 632
+    ExplicitHeight = 234
     object Label1: TLabel
       Left = 8
       Top = 16
@@ -65,6 +65,7 @@ inherited ViewCidadesCadastrar: TViewCidadesCadastrar
       Color = clBtnFace
       DataField = 'ID'
       DataSource = DataSource1
+      Enabled = False
       ReadOnly = True
       TabOrder = 0
     end
@@ -117,58 +118,28 @@ inherited ViewCidadesCadastrar: TViewCidadesCadastrar
         'EX')
       TabOrder = 1
     end
-    object PageControl1: TPageControl
-      Left = 224
-      Top = 112
-      Width = 713
-      Height = 305
-      ActivePage = TabSheet2
+    object edtNome: TDBEdit
+      Left = 8
+      Top = 83
+      Width = 561
+      Height = 23
+      DataField = 'NOME'
+      DataSource = DataSource1
       TabOrder = 3
-      object TabSheet1: TTabSheet
-        Caption = 'TabSheet1'
-      end
-      object TabSheet2: TTabSheet
-        Caption = 'TabSheet2'
-        ImageIndex = 1
-        object PageControl2: TPageControl
-          Left = 7
-          Top = 14
-          Width = 692
-          Height = 253
-          ActivePage = TabSheet4
-          TabOrder = 0
-          object TabSheet3: TTabSheet
-            Caption = 'TabSheet3'
-          end
-          object TabSheet4: TTabSheet
-            Caption = 'TabSheet4'
-            ImageIndex = 1
-            object edtNome: TDBEdit
-              Left = 8
-              Top = 80
-              Width = 650
-              Height = 23
-              DataField = 'NOME'
-              DataSource = DataSource1
-              TabOrder = 0
-            end
-          end
-        end
-      end
     end
   end
   inherited pnRodape: TPanel
-    Top = 442
-    Width = 951
-    ExplicitTop = 299
-    ExplicitWidth = 651
+    Top = 235
+    Width = 636
+    ExplicitTop = 234
+    ExplicitWidth = 632
     inherited btnGravar: TBitBtn
-      Left = 690
-      ExplicitLeft = 390
+      Left = 375
+      ExplicitLeft = 371
     end
     inherited btnCancelar: TBitBtn
-      Left = 820
-      ExplicitLeft = 520
+      Left = 505
+      ExplicitLeft = 501
     end
   end
   inherited DataSource1: TDataSource

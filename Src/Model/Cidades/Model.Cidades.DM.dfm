@@ -9,15 +9,11 @@ object ModelCidadesDM: TModelCidadesDM
     Left = 56
     Top = 48
     object QCidadesCadastroID: TFDAutoIncField
-      AutoGenerateValue = arNone
-      DisplayLabel = 'C'#243'digo'
+      AutoGenerateValue = arDefault
       FieldName = 'ID'
       Origin = 'ID'
-      ProviderFlags = [pfInUpdate]
+      ProviderFlags = [pfInWhere, pfInKey]
       ReadOnly = True
-      ServerAutoIncrement = False
-      AutoIncrementSeed = 1
-      AutoIncrementStep = 1
     end
     object QCidadesCadastroNOME: TStringField
       AutoGenerateValue = arDefault
@@ -41,6 +37,8 @@ object ModelCidadesDM: TModelCidadesDM
   end
   object QCidadesBusca: TFDQuery
     Connection = ModelConexaoDM.FDConnection1
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
     SQL.Strings = (
       'SELECT * FROM CIDADES')
     Left = 160

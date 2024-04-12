@@ -2,8 +2,8 @@ object ViewHerancasCadastrar: TViewHerancasCadastrar
   Left = 0
   Top = 0
   Caption = 'ViewHerancasCadastrar'
-  ClientHeight = 362
-  ClientWidth = 788
+  ClientHeight = 361
+  ClientWidth = 784
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,22 +19,18 @@ object ViewHerancasCadastrar: TViewHerancasCadastrar
   object pnDados: TPanel
     Left = 0
     Top = 0
-    Width = 788
-    Height = 321
+    Width = 784
+    Height = 320
     Align = alClient
     TabOrder = 0
-    ExplicitWidth = 784
-    ExplicitHeight = 320
   end
   object pnRodape: TPanel
     Left = 0
-    Top = 321
-    Width = 788
+    Top = 320
+    Width = 784
     Height = 41
     Align = alBottom
     TabOrder = 1
-    ExplicitTop = 320
-    ExplicitWidth = 784
     object btnGravar: TBitBtn
       Left = 527
       Top = 1

@@ -18,7 +18,8 @@ uses
   Data.DB,
   Vcl.Grids,
   Vcl.DBGrids,
-  Vcl.Menus;
+  Vcl.Menus,
+  FireDAC.Comp.Client;
 
 type
   TViewHerancasBuscar = class(TForm)
@@ -57,13 +58,14 @@ type
     procedure Atualizar1Click(Sender: TObject);
     procedure Excluir1Click(Sender: TObject);
     procedure btnCadastrarClick(Sender: TObject);
+    procedure DBGrid1TitleClick(Column: TColumn);
   private
-
+    FultID: integer;
   protected
     procedure BuscarDados; virtual;
     procedure ChamarTelaCadastrar(id: integer = 0); virtual; abstract; //  abstract pois não chama ela aqui, só nas telas que herdam
   public
-    { Public declarations }
+    property ultID: integer write FultID;
   end;
 
 var
@@ -86,11 +88,20 @@ begin
     raise Exception.Create('Selecione um registro');
   end;
 
+  FultID := DataSource1.DataSet.FieldByName('ID').AsInteger;
   Self.ChamarTelaCadastrar(DataSource1.DataSet.FieldByName('ID').AsInteger);
 end;
 
 procedure TViewHerancasBuscar.btnCadastrarClick(Sender: TObject);
 begin
+
+  // Zera pra não ter risco de ficar com ID anterior
+  FultID := 0;
+
+  if (not DataSource1.DataSet.IsEmpty) then begin
+    FultID := DataSource1.DataSet.FieldByName('ID').AsInteger;
+  end;
+
   Self.ChamarTelaCadastrar;
 end;
 
@@ -125,7 +136,11 @@ begin
     exit;
   end;
 
-  lbTotal.Caption := 'Registros Localizados: ' + FormatFloat('000000', DataSource1.DataSet.RecordCount); 
+  lbTotal.Caption := 'Registros Localizados: ' + FormatFloat('000000', DataSource1.DataSet.RecordCount);
+
+  if (FultID > 0) then begin
+    DataSource1.DataSet.Locate('ID', FultID, []);
+  end;
 end;
 
 procedure TViewHerancasBuscar.DBGrid1DblClick(Sender: TObject);
@@ -152,6 +167,32 @@ begin
   if (Key = #13) then begin
     btnUtilizar.Click;
   end;
+end;
+
+procedure TViewHerancasBuscar.DBGrid1TitleClick(Column: TColumn);
+var
+  campo: string;
+  ordem: string;
+begin
+  if (DataSource1.DataSet.IsEmpty) then begin
+    exit;
+  end;
+
+  // Pega o campo que foi clicado
+  campo := Column.FieldName.Trim;
+  if (campo.IsEmpty) or (Column.Field.FieldKind = fkCalculated) then begin
+    exit;
+  end;
+
+  // Por padrão é ordem decrescente. Ordena pelo campo clicado depois pelo ID
+  ordem := campo + ':D;ID';
+
+  // Se já estiver em ordem decrescente, faz em ordem crescente
+  if (TFDQuery(DataSource1.DataSet).IndexFieldNames.Contains(':D')) then begin
+    ordem := campo + ';ID';
+  end;
+
+  TFDQuery(DataSource1.DataSet).IndexFieldNames := ordem;
 end;
 
 procedure TViewHerancasBuscar.edtBuscarKeyDown(Sender: TObject; var Key: Word;

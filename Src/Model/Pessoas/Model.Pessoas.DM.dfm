@@ -140,6 +140,8 @@ object ModelPessoasDM: TModelPessoasDM
   end
   object QPessoasBusca: TFDQuery
     Connection = ModelConexaoDM.FDConnection1
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
     SQL.Strings = (
       'SELECT '
       'P.ID,'

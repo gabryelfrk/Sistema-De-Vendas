@@ -31,8 +31,10 @@ type
     procedure FormCreate(Sender: TObject);
   private
     FidRegistroAlterar: integer;
+    FultID: integer;
   public
     property idRegistroAlterar: integer read FidRegistroAlterar write FidRegistroAlterar; // Controla se irá Alterar o registro ou se será Novo
+    property ultID: integer read FultID;
   end;
 
 var
@@ -54,6 +56,9 @@ end;
 
 procedure TViewHerancasCadastrar.btnGravarClick(Sender: TObject);
 begin
+
+  // Seta o ID cadastrado
+  FultID := DataSource1.DataSet.FieldByName('ID').AsInteger;
   Self.Close;
   Self.ModalResult := mrOk;     
 end;

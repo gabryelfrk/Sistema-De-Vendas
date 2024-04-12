@@ -26,7 +26,7 @@ object ViewHerancasBuscar: TViewHerancasBuscar
     BevelKind = bkTile
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 1007
+    ExplicitWidth = 999
     DesignSize = (
       999
       55)
@@ -40,14 +40,14 @@ object ViewHerancasBuscar: TViewHerancasBuscar
     object edtBuscar: TEdit
       Left = 8
       Top = 28
-      Width = 944
+      Width = 936
       Height = 23
       Anchors = [akLeft, akTop, akRight]
       TabOrder = 0
       OnChange = edtBuscarChange
       OnKeyDown = edtBuscarKeyDown
       OnKeyPress = edtBuscarKeyPress
-      ExplicitWidth = 948
+      ExplicitWidth = 932
     end
   end
   object pnGrid: TPanel
@@ -58,11 +58,13 @@ object ViewHerancasBuscar: TViewHerancasBuscar
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitWidth = 999
+    ExplicitHeight = 458
     object DBGrid1: TDBGrid
       Left = 0
       Top = 0
-      Width = 1007
-      Height = 439
+      Width = 1003
+      Height = 438
       Align = alClient
       DataSource = DataSource1
       Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -76,22 +78,23 @@ object ViewHerancasBuscar: TViewHerancasBuscar
       OnDrawColumnCell = DBGrid1DrawColumnCell
       OnDblClick = DBGrid1DblClick
       OnKeyPress = DBGrid1KeyPress
+      OnTitleClick = DBGrid1TitleClick
     end
     object pnTotal: TPanel
       Left = 0
-      Top = 439
-      Width = 1007
+      Top = 438
+      Width = 1003
       Height = 21
       Align = alBottom
       TabOrder = 1
-      ExplicitTop = 438
-      ExplicitWidth = 1003
+      ExplicitTop = 437
+      ExplicitWidth = 999
       object lbTotal: TLabel
         AlignWithMargins = True
-        Left = 842
+        Left = 838
         Top = 1
         Width = 154
-        Height = 15
+        Height = 19
         Margins.Left = 0
         Margins.Top = 0
         Margins.Right = 10
@@ -99,6 +102,7 @@ object ViewHerancasBuscar: TViewHerancasBuscar
         Align = alRight
         Caption = 'Registros Localizados: 000000'
         Layout = tlCenter
+        ExplicitHeight = 15
       end
     end
   end
@@ -109,20 +113,22 @@ object ViewHerancasBuscar: TViewHerancasBuscar
     Height = 50
     Align = alBottom
     TabOrder = 2
+    ExplicitTop = 515
+    ExplicitWidth = 999
     object rdGroupFiltros: TRadioGroup
       Left = 1
       Top = 1
-      Width = 601
+      Width = 597
       Height = 48
       Align = alClient
       Caption = 'Buscar por:'
       TabOrder = 0
       OnClick = rdGroupFiltrosClick
-      ExplicitWidth = 597
+      ExplicitWidth = 593
     end
     object btnCadastrar: TBitBtn
       AlignWithMargins = True
-      Left = 602
+      Left = 598
       Top = 8
       Width = 100
       Height = 34
@@ -191,11 +197,11 @@ object ViewHerancasBuscar: TViewHerancasBuscar
         00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       TabOrder = 1
       OnClick = btnCadastrarClick
-      ExplicitLeft = 598
+      ExplicitLeft = 594
     end
     object btnUtilizar: TBitBtn
       AlignWithMargins = True
-      Left = 804
+      Left = 800
       Top = 8
       Width = 100
       Height = 34
@@ -264,11 +270,11 @@ object ViewHerancasBuscar: TViewHerancasBuscar
         78D5FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF}
       TabOrder = 2
       OnClick = btnUtilizarClick
-      ExplicitLeft = 800
+      ExplicitLeft = 796
     end
     object btnFechar: TBitBtn
       AlignWithMargins = True
-      Left = 905
+      Left = 901
       Top = 8
       Width = 100
       Height = 34
@@ -333,11 +339,11 @@ object ViewHerancasBuscar: TViewHerancasBuscar
         0000000000000000000000000000000000000000000000000000}
       TabOrder = 3
       OnClick = btnFecharClick
-      ExplicitLeft = 901
+      ExplicitLeft = 897
     end
     object btnAlterar: TBitBtn
       AlignWithMargins = True
-      Left = 703
+      Left = 699
       Top = 8
       Width = 100
       Height = 34
@@ -402,7 +408,7 @@ object ViewHerancasBuscar: TViewHerancasBuscar
         FA040404040404040404040404040404040404040404F8FC0404}
       TabOrder = 4
       OnClick = btnAlterarClick
-      ExplicitLeft = 699
+      ExplicitLeft = 695
     end
   end
   object DataSource1: TDataSource
