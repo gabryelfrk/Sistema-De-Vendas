@@ -20,7 +20,8 @@ uses
   Vcl.ExtCtrls,
   Vcl.Grids,
   Vcl.DBGrids,
-  Model.Pessoas.DM;
+  Model.Pessoas.DM,
+  View.Pessoas.Cadastrar;
 
 type
   TViewPessoasBuscar = class(TViewHerancasBuscar)
@@ -61,8 +62,23 @@ begin
 end;
 
 procedure TViewPessoasBuscar.ChamarTelaCadastrar(id: integer = 0);
+var
+  ViewPessoasCadastrar: TViewPessoasCadastrar;
 begin
+
+  // Herda lógica padrão
   inherited;
+
+  ViewPessoasCadastrar := TViewPessoasCadastrar.Create(nil);
+  try
+    ViewPessoasCadastrar.idRegistroAlterar := id;
+    if (ViewPessoasCadastrar.ShowModal = mrOk) then begin
+      inherited ultID := ViewPessoasCadastrar.ultID;
+      Self.BuscarDados;
+    end;
+  finally
+   ViewPessoasCadastrar.Free;
+  end;
 end;
 
 procedure TViewPessoasBuscar.FormCreate(Sender: TObject);

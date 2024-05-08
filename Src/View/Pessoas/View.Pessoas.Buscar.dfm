@@ -2,14 +2,19 @@ inherited ViewPessoasBuscar: TViewPessoasBuscar
   Caption = 'Pessoas Buscar'
   OnCreate = FormCreate
   OnDestroy = FormDestroy
+  ExplicitWidth = 1011
+  ExplicitHeight = 603
   TextHeight = 15
   inherited pnTopo: TPanel
+    ExplicitWidth = 995
     inherited edtBuscar: TEdit
-      ExplicitWidth = 940
+      ExplicitWidth = 928
     end
   end
   inherited pnGrid: TPanel
     inherited DBGrid1: TDBGrid
+      Width = 999
+      Height = 437
       Columns = <
         item
           Expanded = False
@@ -24,13 +29,11 @@ inherited ViewPessoasBuscar: TViewPessoasBuscar
         item
           Expanded = False
           FieldName = 'FANTASIA'
-          Width = 64
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'CLIENTE'
-          Width = 64
           Visible = True
         end
         item
@@ -41,54 +44,64 @@ inherited ViewPessoasBuscar: TViewPessoasBuscar
         item
           Expanded = False
           FieldName = 'ID_CIDADE'
-          Width = 64
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'ENDERECO'
-          Width = 64
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'TELEFONE'
-          Width = 64
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'CELULAR'
-          Width = 64
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'CidadeNome'
-          Width = 64
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'UF'
-          Width = 64
           Visible = True
         end>
     end
     inherited pnTotal: TPanel
+      Top = 437
+      Width = 999
       inherited lbTotal: TLabel
-        ExplicitLeft = 838
+        Left = 834
+        Height = 19
       end
     end
   end
   inherited pnRodape: TPanel
     inherited rdGroupFiltros: TRadioGroup
+      Width = 593
       Columns = 3
       ItemIndex = 1
       Items.Strings = (
         'C'#243'digo (F1)'
         'Nome / Fantasia (F2)'
         'Cidade (F3)')
+    end
+    inherited btnCadastrar: TBitBtn
+      Left = 594
+    end
+    inherited btnUtilizar: TBitBtn
+      Left = 796
+    end
+    inherited btnFechar: TBitBtn
+      Left = 897
+    end
+    inherited btnAlterar: TBitBtn
+      Left = 695
     end
   end
   inherited DataSource1: TDataSource

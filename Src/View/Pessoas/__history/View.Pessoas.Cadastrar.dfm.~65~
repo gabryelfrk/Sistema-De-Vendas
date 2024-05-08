@@ -1,0 +1,406 @@
+inherited ViewPessoasCadastrar: TViewPessoasCadastrar
+  Caption = 'Pessoas Cadastrar/Alterar'
+  ClientHeight = 385
+  ClientWidth = 884
+  OnShow = FormShow
+  ExplicitWidth = 896
+  ExplicitHeight = 423
+  TextHeight = 15
+  inherited pnDados: TPanel
+    Width = 884
+    Height = 344
+    ExplicitWidth = 1018
+    ExplicitHeight = 452
+    object Label1: TLabel
+      Left = 32
+      Top = 24
+      Width = 39
+      Height = 15
+      Caption = 'C'#243'digo'
+      FocusControl = DBEdit1
+    end
+    object Label2: TLabel
+      Left = 94
+      Top = 24
+      Width = 69
+      Height = 15
+      Caption = 'Nome/Raz'#227'o'
+      FocusControl = edtNome
+    end
+    object Label3: TLabel
+      Left = 467
+      Top = 24
+      Width = 43
+      Height = 15
+      Caption = 'Fantasia'
+      FocusControl = DBEdit3
+    end
+    object Label4: TLabel
+      Left = 32
+      Top = 90
+      Width = 21
+      Height = 15
+      Caption = 'CEP'
+      FocusControl = DBEdit4
+    end
+    object Label5: TLabel
+      Left = 114
+      Top = 90
+      Width = 79
+      Height = 15
+      Caption = 'C'#243'digo Cidade'
+      FocusControl = DBEdit5
+    end
+    object Label6: TLabel
+      Left = 467
+      Top = 90
+      Width = 49
+      Height = 15
+      Caption = 'Endere'#231'o'
+      FocusControl = DBEdit6
+    end
+    object Label7: TLabel
+      Left = 753
+      Top = 90
+      Width = 44
+      Height = 15
+      Caption = 'N'#250'mero'
+      FocusControl = DBEdit7
+    end
+    object Label8: TLabel
+      Left = 32
+      Top = 138
+      Width = 31
+      Height = 15
+      Caption = 'Bairro'
+      FocusControl = DBEdit8
+    end
+    object Label9: TLabel
+      Left = 466
+      Top = 139
+      Width = 77
+      Height = 15
+      Caption = 'Complemento'
+      FocusControl = DBEdit9
+    end
+    object Label10: TLabel
+      Left = 753
+      Top = 139
+      Width = 64
+      Height = 15
+      Caption = 'Nascimento'
+      FocusControl = DBEdit10
+    end
+    object Label11: TLabel
+      Left = 32
+      Top = 185
+      Width = 60
+      Height = 15
+      Caption = 'Telefone'
+      FocusControl = DBEdit11
+    end
+    object Label12: TLabel
+      Left = 249
+      Top = 185
+      Width = 37
+      Height = 15
+      Caption = 'Celular'
+      FocusControl = DBEdit12
+    end
+    object Label13: TLabel
+      Left = 466
+      Top = 185
+      Width = 34
+      Height = 15
+      Caption = 'E-mail'
+      FocusControl = DBEdit13
+    end
+    object Label14: TLabel
+      Left = 249
+      Top = 227
+      Width = 21
+      Height = 15
+      Caption = 'CPF'
+      FocusControl = DBEdit14
+    end
+    object Label15: TLabel
+      Left = 409
+      Top = 227
+      Width = 15
+      Height = 15
+      Caption = 'RG'
+      FocusControl = DBEdit15
+    end
+    object Label16: TLabel
+      Left = 620
+      Top = 227
+      Width = 27
+      Height = 15
+      Caption = 'CNPJ'
+      FocusControl = DBEdit16
+    end
+    object Label17: TLabel
+      Left = 791
+      Top = 227
+      Width = 9
+      Height = 15
+      Caption = 'IE'
+      FocusControl = DBEdit17
+    end
+    object Label18: TLabel
+      Left = 32
+      Top = 305
+      Width = 47
+      Height = 15
+      Caption = 'Cadastro'
+      FocusControl = DBEdit18
+    end
+    object DBEdit1: TDBEdit
+      Left = 32
+      Top = 40
+      Width = 60
+      Height = 23
+      Color = clBtnFace
+      DataField = 'ID'
+      DataSource = DataSource1
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object edtNome: TDBEdit
+      Left = 94
+      Top = 40
+      Width = 370
+      Height = 23
+      DataField = 'NOME'
+      DataSource = DataSource1
+      TabOrder = 1
+    end
+    object DBEdit3: TDBEdit
+      Left = 467
+      Top = 40
+      Width = 386
+      Height = 23
+      DataField = 'FANTASIA'
+      DataSource = DataSource1
+      TabOrder = 2
+    end
+    object DBEdit4: TDBEdit
+      Left = 32
+      Top = 106
+      Width = 80
+      Height = 23
+      DataField = 'CEP'
+      DataSource = DataSource1
+      TabOrder = 3
+    end
+    object DBEdit5: TDBEdit
+      Left = 114
+      Top = 106
+      Width = 79
+      Height = 23
+      DataField = 'ID_CIDADE'
+      DataSource = DataSource1
+      TabOrder = 4
+    end
+    object edtCidade: TEdit
+      Left = 195
+      Top = 106
+      Width = 269
+      Height = 23
+      Color = clBtnFace
+      ReadOnly = True
+      TabOrder = 5
+    end
+    object DBEdit6: TDBEdit
+      Left = 467
+      Top = 106
+      Width = 284
+      Height = 23
+      DataField = 'ENDERECO'
+      DataSource = DataSource1
+      TabOrder = 6
+    end
+    object DBEdit7: TDBEdit
+      Left = 753
+      Top = 106
+      Width = 100
+      Height = 23
+      DataField = 'NUMERO'
+      DataSource = DataSource1
+      TabOrder = 7
+    end
+    object DBEdit8: TDBEdit
+      Left = 32
+      Top = 154
+      Width = 432
+      Height = 23
+      DataField = 'BAIRRO'
+      DataSource = DataSource1
+      TabOrder = 8
+    end
+    object DBEdit9: TDBEdit
+      Left = 466
+      Top = 154
+      Width = 285
+      Height = 23
+      DataField = 'COMPLEMENTO'
+      DataSource = DataSource1
+      TabOrder = 9
+    end
+    object DBEdit10: TDBEdit
+      Left = 753
+      Top = 154
+      Width = 100
+      Height = 23
+      DataField = 'NASCIMENTO'
+      DataSource = DataSource1
+      TabOrder = 10
+    end
+    object DBEdit11: TDBEdit
+      Left = 32
+      Top = 201
+      Width = 215
+      Height = 23
+      DataField = 'TELEFONE'
+      DataSource = DataSource1
+      TabOrder = 11
+    end
+    object DBEdit12: TDBEdit
+      Left = 249
+      Top = 201
+      Width = 215
+      Height = 23
+      DataField = 'CELULAR'
+      DataSource = DataSource1
+      TabOrder = 12
+    end
+    object DBEdit13: TDBEdit
+      Left = 466
+      Top = 201
+      Width = 387
+      Height = 23
+      DataField = 'EMAIL'
+      DataSource = DataSource1
+      TabOrder = 13
+    end
+    object DBRadioGroup1: TDBRadioGroup
+      Left = 32
+      Top = 233
+      Width = 213
+      Height = 36
+      Caption = 'Tipo Jur'#237'dico'
+      Columns = 2
+      DataField = 'TIPO_JURIDICO'
+      DataSource = DataSource1
+      Items.Strings = (
+        'Pessoa F'#237'sica '
+        'Pessoa Jur'#237'dica')
+      TabOrder = 14
+      Values.Strings = (
+        '1'
+        '2')
+    end
+    object DBEdit14: TDBEdit
+      Left = 249
+      Top = 243
+      Width = 158
+      Height = 23
+      DataField = 'CPF'
+      DataSource = DataSource1
+      TabOrder = 15
+    end
+    object DBEdit15: TDBEdit
+      Left = 409
+      Top = 243
+      Width = 122
+      Height = 23
+      DataField = 'RG'
+      DataSource = DataSource1
+      TabOrder = 16
+    end
+    object DBEdit16: TDBEdit
+      Left = 620
+      Top = 243
+      Width = 165
+      Height = 23
+      DataField = 'CNPJ'
+      DataSource = DataSource1
+      TabOrder = 17
+    end
+    object DBEdit17: TDBEdit
+      Left = 791
+      Top = 243
+      Width = 214
+      Height = 23
+      DataField = 'IE'
+      DataSource = DataSource1
+      TabOrder = 18
+    end
+    object DBEdit18: TDBEdit
+      Left = 32
+      Top = 321
+      Width = 135
+      Height = 23
+      Color = clBtnFace
+      DataField = 'DH_CADASTRO'
+      DataSource = DataSource1
+      ReadOnly = True
+      TabOrder = 19
+    end
+  end
+  inherited pnRodape: TPanel
+    Top = 344
+    Width = 884
+    ExplicitTop = 452
+    ExplicitWidth = 1018
+    inherited btnGravar: TBitBtn
+      Left = 623
+      ExplicitLeft = 757
+    end
+    inherited btnCancelar: TBitBtn
+      Left = 753
+      ExplicitLeft = 887
+    end
+  end
+  object DBCheckBox1: TDBCheckBox [2]
+    Left = 32
+    Top = 67
+    Width = 60
+    Height = 17
+    Caption = 'Ativo'
+    DataField = 'ATIVO'
+    DataSource = DataSource1
+    TabOrder = 2
+    ValueChecked = 'S'
+    ValueUnchecked = 'N'
+  end
+  object DBCheckBox2: TDBCheckBox [3]
+    Left = 82
+    Top = 67
+    Width = 73
+    Height = 17
+    Caption = 'Cliente'
+    DataField = 'CLIENTE'
+    DataSource = DataSource1
+    TabOrder = 3
+    ValueChecked = 'S'
+    ValueUnchecked = 'N'
+  end
+  object DBCheckBox3: TDBCheckBox [4]
+    Left = 142
+    Top = 67
+    Width = 85
+    Height = 17
+    Caption = 'Fornecedor'
+    DataField = 'FORNECEDOR'
+    DataSource = DataSource1
+    TabOrder = 4
+    ValueChecked = 'S'
+    ValueUnchecked = 'N'
+  end
+  inherited DataSource1: TDataSource
+    DataSet = ModelPessoasDM.QPessoasCadastro
+    Left = 616
+    Top = 64
+  end
+end

@@ -50,8 +50,7 @@ implementation
 {$R *.dfm}
 
 uses
-  View.Cidades.Buscar,
-  View.Pessoas.Buscar;
+  View.Cidades.Buscar, View.Pessoas.Buscar;
 
 procedure TViewPrincipal.FormCreate(Sender: TObject);
 begin
@@ -79,3 +78,4 @@ begin
 end;
 
 end.
+

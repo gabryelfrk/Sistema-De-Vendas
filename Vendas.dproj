@@ -145,6 +145,10 @@
         <DCCReference Include="Src\Exceptions\Exceptions.FieldName.pas"/>
         <DCCReference Include="Src\RTTI\RTTI.FieldName.pas"/>
         <DCCReference Include="Src\Utils\Utils.pas"/>
+        <DCCReference Include="Src\View\Pessoas\View.Pessoas.Cadastrar.pas">
+            <Form>ViewPessoasCadastrar</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

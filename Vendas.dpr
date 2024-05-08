@@ -13,7 +13,8 @@ uses
   View.Pessoas.Buscar in 'Src\View\Pessoas\View.Pessoas.Buscar.pas' {ViewPessoasBuscar},
   Exceptions.FieldName in 'Src\Exceptions\Exceptions.FieldName.pas',
   RTTI.FieldName in 'Src\RTTI\RTTI.FieldName.pas',
-  Utils in 'Src\Utils\Utils.pas';
+  Utils in 'Src\Utils\Utils.pas',
+  View.Pessoas.Cadastrar in 'Src\View\Pessoas\View.Pessoas.Cadastrar.pas' {ViewPessoasCadastrar};
 
 {$R *.res}
 
@@ -23,5 +24,6 @@ begin
   Application.Title := 'Delphi: Sistema de vendas do zero ao multicamadas';
   Application.CreateForm(TModelConexaoDM, ModelConexaoDM);
   Application.CreateForm(TViewPrincipal, ViewPrincipal);
+  Application.CreateForm(TViewPessoasCadastrar, ViewPessoasCadastrar);
   Application.Run;
 end.

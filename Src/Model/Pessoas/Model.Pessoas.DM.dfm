@@ -8,6 +8,8 @@ object ModelPessoasDM: TModelPessoasDM
     Left = 136
     Top = 56
     object QPessoasCadastroID: TFDAutoIncField
+      AutoGenerateValue = arDefault
+      DisplayLabel = 'C'#243'digo'
       FieldName = 'ID'
       Origin = 'ID'
       ProviderFlags = [pfInWhere, pfInKey]
@@ -15,18 +17,21 @@ object ModelPessoasDM: TModelPessoasDM
     end
     object QPessoasCadastroNOME: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Nome/Raz'#227'o'
       FieldName = 'NOME'
       Origin = 'NOME'
       Size = 60
     end
     object QPessoasCadastroFANTASIA: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Fantasia'
       FieldName = 'FANTASIA'
       Origin = 'FANTASIA'
       Size = 60
     end
     object QPessoasCadastroCLIENTE: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Cliente'
       FieldName = 'CLIENTE'
       Origin = 'CLIENTE'
       FixedChar = True
@@ -34,6 +39,7 @@ object ModelPessoasDM: TModelPessoasDM
     end
     object QPessoasCadastroFORNECEDOR: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Fornecedor'
       FieldName = 'FORNECEDOR'
       Origin = 'FORNECEDOR'
       FixedChar = True
@@ -46,53 +52,62 @@ object ModelPessoasDM: TModelPessoasDM
       Size = 10
     end
     object QPessoasCadastroID_CIDADE: TIntegerField
+      DisplayLabel = 'C'#243'digo Cidade'
       FieldName = 'ID_CIDADE'
       Origin = 'ID_CIDADE'
       Required = True
     end
     object QPessoasCadastroENDERECO: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Endere'#231'o'
       FieldName = 'ENDERECO'
       Origin = 'ENDERECO'
       Size = 60
     end
     object QPessoasCadastroNUMERO: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'N'#250'mero'
       FieldName = 'NUMERO'
       Origin = 'NUMERO'
     end
     object QPessoasCadastroBAIRRO: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Bairro'
       FieldName = 'BAIRRO'
       Origin = 'BAIRRO'
       Size = 40
     end
     object QPessoasCadastroCOMPLEMENTO: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Complemento'
       FieldName = 'COMPLEMENTO'
       Origin = 'COMPLEMENTO'
       Size = 40
     end
     object QPessoasCadastroTELEFONE: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Telefone'
       FieldName = 'TELEFONE'
       Origin = 'TELEFONE'
       Size = 15
     end
     object QPessoasCadastroCELULAR: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Celular'
       FieldName = 'CELULAR'
       Origin = 'CELULAR'
       Size = 15
     end
     object QPessoasCadastroEMAIL: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'E-mail'
       FieldName = 'EMAIL'
       Origin = 'EMAIL'
       Size = 50
     end
     object QPessoasCadastroTIPO_JURIDICO: TIntegerField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Tipo Jur'#237'dico'
       FieldName = 'TIPO_JURIDICO'
       Origin = 'TIPO_JURIDICO'
     end
@@ -122,6 +137,7 @@ object ModelPessoasDM: TModelPessoasDM
     end
     object QPessoasCadastroATIVO: TStringField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Ativo'
       FieldName = 'ATIVO'
       Origin = 'ATIVO'
       FixedChar = True
@@ -129,11 +145,13 @@ object ModelPessoasDM: TModelPessoasDM
     end
     object QPessoasCadastroNASCIMENTO: TDateField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Nascimento'
       FieldName = 'NASCIMENTO'
       Origin = 'NASCIMENTO'
     end
     object QPessoasCadastroDH_CADASTRO: TSQLTimeStampField
       AutoGenerateValue = arDefault
+      DisplayLabel = 'Cadastro'
       FieldName = 'DH_CADASTRO'
       Origin = 'DH_CADASTRO'
     end
